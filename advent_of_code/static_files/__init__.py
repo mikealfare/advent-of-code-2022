@@ -7,4 +7,4 @@ def get(file_name: str, static_root: Path = None) -> List[str]:
         static_root = Path(__file__).parent
     file = static_root / file_name
     contents = file.read_text()
-    return contents.split('\n')
+    return contents.strip().split('\n')
